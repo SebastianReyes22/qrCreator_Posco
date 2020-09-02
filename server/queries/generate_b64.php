@@ -118,7 +118,7 @@
     function genQRCode($code){
 
         //Inclusión de la librería que genera el código qr
-        require_once "../phpqrcode/qrlib.php";
+        //require_once "../phpqrcode/qrlib.php";
 
         //Directorio donde estará el archivo
         $tempDir = '../qr/';

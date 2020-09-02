@@ -29,6 +29,7 @@ $('#send_mail_form').on('submit',function(e){
         beforeSend: function(){ $('#btn-to-send').attr("disabled",true); },
         success: function(data){
             if(data.status==="OK" && data.email && data.message){
+                //$('#server_answer').html(data.message);
                 sendMail(data.email,data.message);
             }else if(data.status==="ERR" && data.message){
                 quitMsgEvent('server_answer',data.message,'div-red');
@@ -38,9 +39,6 @@ $('#send_mail_form').on('submit',function(e){
         },
         error: function(){
             quitMsgEvent('server_answer',"No se pudo consultar la información. Por favor, inténtelo de nuevo",'div-red');
-        },
-        complete: function(){
-            $('#btn-to-send').attr("disabled",false);
         }
     });
 });

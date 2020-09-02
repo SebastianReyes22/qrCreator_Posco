@@ -76,10 +76,10 @@
                         //echo $curLoc[0]."||".$curLoc[1]."||".$curLoc[2]."||".$curLoc[3]."<br>";
                         continue;
                     }else{
-                        exit(jsonERR("bag 1 Hay un error en el archivo"));
+                        exit(jsonERR("Hay un error en el archivo"));
                     }
                 }else{
-                    exit(jsonERR("bag 2 Hay un error en el archivo"));
+                    exit(jsonERR("Hay un error en el archivo"));
                 }
             }
             $line = $content[$i];

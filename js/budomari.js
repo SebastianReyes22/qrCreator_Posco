@@ -61,12 +61,10 @@ $('#load-file').submit(function(e){
     call.fail(
         function(){
             quitMsgEvent('server_answer',"Por favor, presione Limpiar y seleccione el archivo de nuevo",'div-red');
-            console.log("ajax fail!");
         }
     );
     call.always(
         function(data){ 
-            console.log(data);
             $('#btn-submit').val("Generar");
             $('#btn-submit').attr('disabled',false);
             $('#clean-all').show();
@@ -78,7 +76,7 @@ let label;
 let date;
 function doFile(groupLbls,codesArray){
     let doc = new jsPDF('l', 'mm', 'letter');
-    if(Array.isArray(codesArray)){
+    if(Array.isArray(codesArray) && Array.isArray(groupLbls) && groupLbls.length==codesArray.length){
         codesArray.forEach(function(codeArray,index){
             label = groupLbls[index];
             if(index!=0){   doc.addPage();  }
@@ -127,7 +125,7 @@ function doFile(groupLbls,codesArray){
         }); 
         download(doc);
     }else{
-        console.log("Hubo un error con los datos");
+        quitMsgEvent('server_answer',"No se pueden generar las etiquetas. Inténtelo de nuevo",'div-red');
     }
 }
 function drawLines(doc){
@@ -180,12 +178,9 @@ function drawLines(doc){
 }
 function download(doc){
     doc.setProperties({
-        title: 'PDF Title',
-        subject: 'Info about PDF',
-        author: 'PDFAuthor',
-        keywords: 'generated, javascript, web 2.0, ajax',
-        creator: 'My Company'
+        title: 'Etiquetas NMEX Budomari',
+        author: 'Sistemas POSCO Ags',
+        creator: 'POSCO MPPC S.A. DE C.V.'
     });
-
     $('#pdfFrame').attr('src',doc.output('datauristring'));
 }
