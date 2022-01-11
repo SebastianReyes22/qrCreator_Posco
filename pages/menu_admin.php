@@ -21,6 +21,7 @@
             <ul>
                 <li><a href="label.php">NISSAN</a></li>
                 <li><a href="budomari.php">Budomari</a></li>
+                <li><a href="compas.php">COMPAS</a></li>
             </ul>
         </li>
         <li><a>Partes<span class="flecha">&#9660</span></a>

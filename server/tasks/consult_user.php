@@ -12,7 +12,7 @@
 
              <p>Usted solicitó un restablecimiento de contraseña para su cuenta en el Generador de Etiquetas POSCO.</p>
              Para confirmar esta petición, y establecer una nueva contraseña para su cuenta, por favor vaya a la siguiente dirección de Internet:"."<br>".
-             "<a href='http://192.168.70.5/qrCreator_Posco/pages/reset_pwd.php?token=".$token."'>http://192.168.70.5/qrCreator_Posco/pages/reset_pwd.php?token=".$token."</a>"."<br>
+             "<a href='http://192.168.104.2/qrCreator_Posco/pages/reset_pwd.php?token=".$token."'>http://192.168.104.2/qrCreator_Posco/pages/reset_pwd.php?token=".$token."</a>"."<br>
              (Este enlace es válido por 10 minutos desde el momento en que hizo la solicitud por primera vez)
              <p>Si usted no ha solicitado este restablecimiento de contraseña, no necesita realizar ninguna acción.</p>
              Si necesita ayuda, por favor póngase en contacto con un administrador.

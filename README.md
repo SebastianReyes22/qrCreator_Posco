@@ -1,1 +1,0 @@
-# qrCreator_Posco

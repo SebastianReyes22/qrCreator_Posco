@@ -79,13 +79,13 @@
         $minDiff = minDiff($connection,$token);
         mysqli_close($connection);
         if($minDiff === false){
-            exit(errMessage("No se puede cambiar la contraseña. Inténtelo de Nuevo"));
+            exit(errMessage("Enlace inactivo. Intentelo de Nuevo"));
         }
         if((empty($minDiff) && $minDiff!=0) ||  !is_numeric($minDiff)){
-            exit(errMessage("No se puede cambiar la contraseña. Inténtelo de Nuevo"));
+            exit(errMessage("Enlace inactivo. Intentelo de Nuevo"));
         }
         if($minDiff>10){ 
-            exit(errMessage("Enlace inválido por limite de tiempo")); 
+            exit(errMessage("Enlace invalido por limite de tiempo")); 
         }
     }
     function errMessage($message){
