@@ -164,7 +164,7 @@
         $code .= str_pad($data['part'],13,' ');
         $code .= str_pad($data['ran'],8,' ');
         $code .= str_pad($data['cantidad'],4,'0',STR_PAD_LEFT);
-        $code .= $data['fechaPro'];
+        $code .= str_pad($data['fechaPro'],8,'0',STR_PAD_LEFT);
         $code .= str_pad($data['lote'],20,' ');
         $code .= str_pad($data['origen'],50,' ');
         $code .= str_pad($data['molino'],20,' ');
@@ -172,7 +172,7 @@
         $code .= str_pad($data['ancho'],4,'0',STR_PAD_LEFT);
         $code .= str_pad($data['avance'],4,'0',STR_PAD_LEFT);
         $code .= str_pad($data['espesor'],4,'0',STR_PAD_LEFT);
-        $code .= str_pad($data['fechaIngreso'],8,' ');
+        $code .= str_pad($data['fechaIngreso'],8,'0', STR_PAD_LEFT);
         $code .= str_pad($data['numInspeccion'],20,' ');
         $code .= str_pad($data['curDesc'],15,' ');
         $code .= str_pad($data['pesoRollo'],7,'0',STR_PAD_LEFT);
