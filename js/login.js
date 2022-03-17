@@ -22,7 +22,7 @@ $('#login_form').on('submit',function(event){
         $.ajax({
             type: 'post',
             data: postData,
-            url: '../server/tasks/session_start.php',
+            url: './server/tasks/session_start.php',
             dataType: 'json',
             beforeSend: function(){ $('#btn-login').attr("disabled",true); },
             success: function(data){

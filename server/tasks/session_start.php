@@ -10,7 +10,7 @@
             exit(json_encode(
                 array(
                     "status" => "OK",
-                    "location" => ($result['user_role']==='0') ? "menu_user.php" : "menu_admin.php",
+                    "location" => ($result['user_role']==='0') ? "./view/compas.php" : "./view/menu_admin.php",
                 )
             ));
         }else{
@@ -22,5 +22,5 @@
             ));
         }
     }
-    header("location:../../pages/error.html");
+    header("location:../../view/error.html");
 ?>

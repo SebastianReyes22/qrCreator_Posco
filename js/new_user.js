@@ -109,7 +109,7 @@ $('#new_user_form').on('submit',function(event){
             }else if(data.status==="ERR" && data.message){
                 quitMsgEvent('server_answer',data.message,'div-red');
             }else{
-                window.location = "../pages/index.php";
+                window.location = "../view/index.php";
             }
         },
         error: function(){

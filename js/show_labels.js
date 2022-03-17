@@ -11,7 +11,7 @@ window.onload = function(){
             }else if(data.status==="ERR" && data.message){
                 $('#label-panel').html(data.message);
             }else{
-                window.location = "../pages/index.php";
+                window.location = "../view/index.php";
             }
         },
         error: function(){
@@ -50,7 +50,7 @@ $('#form_show_labels').on("submit",function(e){
             }else if(data.status==="ERR" && data.message){
                 $('#label-panel').html(data.message);
             }else{
-                window.location = "../pages/index.php";
+                window.location = "../view/index.php";
             }
         },
         error: function(){

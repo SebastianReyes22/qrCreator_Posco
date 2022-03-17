@@ -337,7 +337,7 @@ $('#form_label').on('submit',function(event){
 
                 }else{
 
-                    window.location="../pages/index.php"; // redirección a inicio
+                    window.location="../view/index.php"; // redirección a inicio
 
                 }
             },

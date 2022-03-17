@@ -242,7 +242,7 @@ function consult_part_lote(idInput){
                             window.location = "error.html";
                         }    
                     }else{
-                        window.location="../pages/index.php";
+                        window.location="../view/index.php";
                     }
                 },
                 error: function(){
