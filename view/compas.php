@@ -4,9 +4,10 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <?php
+<?php
         include("../components/header_view.php");
     ?>
+
 <body class="body-menu">
     <?php
         include("../server/tasks/select_menu.php");
@@ -19,11 +20,12 @@
         <div class="div-center">
             <form enctype="multipart/form-data" id="load-file">
                 <div class="input-group-lg input-examinar">
-                    <input type="file" class="form-control input-examinar" id="file-1" name="file-1" acept="xlsx" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                    <input type="file" class="form-control input-examinar" id="file-1" name="file-1" acept="xlsx"
+                        aria-describedby="inputGroupFileAddon04" aria-label="Upload">
                     <button class="btn btn-primary" id="btn-submit" type="submit">Generar</button>
                     <button class="btn btn-danger" id="clean-all">Limpiar</button>
                 </div>
-                <h5>Nota: Sólo se permiten archivos de excel</h5>                
+                <h5>Nota: Sólo se permiten archivos de Excel</h5>
             </form>
         </div>
         <iframe frameborder="0" id="pdfFrame"></iframe>
@@ -36,4 +38,5 @@
     <script src="../js/menu.js"></script>
     <script src="../js/quitMsg.js"></script>
 </body>
+
 </html>

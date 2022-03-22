@@ -1,9 +1,9 @@
 //event: modificar la navegación con tab al cargar la página
 window.onload = function(){
     document.getElementById('user').tabIndex = 1;
-    document.getElementById('pass').tabIndex = 2;
-    document.getElementById('confirm').tabIndex = 3;
-    document.getElementById('email').tabIndex = 4;
+    document.getElementById('pass').tabIndex = 3;
+    document.getElementById('confirm').tabIndex = 4;
+    document.getElementById('email').tabIndex = 2;
     document.getElementById('tuser').tabIndex = 5;
     document.getElementById('btn-login').tabIndex = 6;
     document.getElementById('clean_all').tabIndex = 7;

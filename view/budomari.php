@@ -4,33 +4,35 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etiquetas Budomari</title>
 
-    <!--css-->
-    <link rel="stylesheet" href="../styles/basics.css">
-    <link rel="stylesheet" href="../styles/menu.css">
-    <link rel="stylesheet" href="../styles/load_lots.css">
+<head>
+    <?php
+        include("../components/header_view.php");
+    ?>
 </head>
-<body class="f14">
-    <?php require '../server/tasks/select_menu.php'; ?>
-    <h1>Generar Etiquetas Budomari</h1>
-    <div class="div-center">
-        <div class="div-msg" id="server_answer"></div>
+
+<body class="body-menu">
+    <?php
+        include("../server/tasks/select_menu.php");
+    ?>
+    <div class="text-center home-etiquetas">
+        <h1 class="title">Generar Etiquetas BUDOMARI - NISSAN</h1>
+        <div class="div-center">
+            <div class="div-msg" id="server_answer"></div>
+        </div>
+        <div class="div-center">
+            <form enctype="multipart/form-data" id="load-file">
+                <div class="input-group-lg input-examinar">
+                    <input type="file" class="form-control input-examinar" id="file-862" name="file-862" acept="txt"
+                        aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                    <button class="btn btn-primary" id="btn-submit" type="submit">Generar</button>
+                    <button class="btn btn-danger" id="clean-all">Limpiar</button>
+                </div>
+                <h5>Nota: Sólo se permiten archivos de Excel</h5>
+            </form>
+        </div>
+        <iframe frameborder="0" id="pdfFrame"></iframe>
     </div>
-    <div class="div-center">
-        <form enctype="multipart/form-data" id="load-file">
-            <input type="file" id="file-862" name="file-862">
-            <span class="i f12">Nota: Sólo se permite .txt</span>
-            <div id="wait-msg" class="div-center mt10">
-                <input type="submit" id="btn-submit" value="Generar">
-                <button class="btn-cancel" id="clean-all">Limpiar</button>
-            </div>
-        </form>
-    </div>
-    <iframe frameborder="0" id="pdfFrame"></iframe>
 
     <!--librerias-->
     <script src="../js/libraries/jquery-3.4.1.min.js"></script>
@@ -40,4 +42,5 @@
     <script src="../js/menu.js"></script>
     <script src="../js/quitMsg.js"></script>
 </body>
+
 </html>
